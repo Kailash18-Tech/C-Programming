@@ -1,0 +1,24 @@
+          RECTANGLE
+
+SOURCE CODE:
+
+#include <stdio.h>
+
+int main()
+{  
+    int len=10, bre=5;
+    for(int i=0; i<bre; i++){
+        for(int j=0; j<len; j++){
+            printf("* ");
+        }
+        printf("\n");
+    }
+}
+
+OUTPUT:
+
+* * * * * * * * * * 
+* * * * * * * * * * 
+* * * * * * * * * * 
+* * * * * * * * * * 
+* * * * * * * * * * 
