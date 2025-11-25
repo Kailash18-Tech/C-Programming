@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+
+void naiveSearch(string text, string pattern) {
+    int n = text.length();
+    int m = pattern.length();
+
+    // Check at all possible positions
+    for (int i = 0; i <= n - m; i++) {
+
+        int j;
+        // Compare pattern with text segment
+        for (j = 0; j < m; j++) {
+            if (text[i + j] != pattern[j])
+                break;
+        }
+
+        // If full pattern matched
+        if (j == m)
+            cout << "Pattern found at index " << i << endl;
+    }
+}
+
+int main() {
+    string text, pattern;
+
+    cout << "Enter text: ";
+    cin >> text;
+    cout << "Enter pattern: ";
+    cin >> pattern;
+
+    naiveSearch(text, pattern);
+
+    return 0;
+}
+
+INPUT:
+
+text = AABAACAADAABAABA
+pattern = AABA
+
+OUTPUT:
+
+Pattern found at index 0
+Pattern found at index 9
+Pattern found at index 12
